@@ -61,9 +61,3 @@ on boot
 on post-fs-data
    # Open permissions for touchkey_enable so KeyDisabler can write to it
     chown system root /sys/devices/virtual/sec/sec_touchkey/touchkey_enabled
-
-# SENSOR FRAMEWORK : starts fingerprintService
-service vcsFPService /vendor/bin/vcsFPService
-    class main
-    user system
-    group system
